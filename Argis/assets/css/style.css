@@ -120,11 +120,19 @@ h1.text-content {
   font-family: Gotham,'Roboto', sans-serif;
   font-size: 21px; }
 
+.lb-nav {
+  display: none !important;
+  visibility: none !important; }
+
 .grid-item:hover .text-item {
   opacity: 1 !important;
   visibility: visible;
   transition: 0.25s ease-in-out;
   display: block; }
+
+.idioma {
+  width: 35px;
+  height: 35px; }
 
 @media screen and (max-width: 1000px) {
   .grid-item,

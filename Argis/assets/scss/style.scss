@@ -163,6 +163,11 @@ h1.text-content {
   font-size: 21px;
 }
 
+.lb-nav{
+  display: none!important;
+  visibility: none!important;
+}
+
 
 
 .grid-item:hover .text-item{
@@ -170,6 +175,11 @@ h1.text-content {
   visibility: visible;
   transition: 0.25s ease-in-out;
   display: block;
+}
+
+.idioma{
+  width: 35px;
+  height: 35px;
 }
 
 
