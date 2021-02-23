@@ -179,19 +179,8 @@ h1.text-content {
   height: 35px;
 }
 
- .lb-close {
-  position:absolute!important;
-  background: white url('../img/x.svg') no-repeat center center ;
-  background-size: 20%;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  right: -20px;
-  top: -20px;
-  cursor: pointer;
-}
 
-@media screen and (max-width:900px){
+@media screen and (max-width:1000px){
   .grid-item,
   .grid-sizer {
     width: 33.333%;
@@ -200,36 +189,6 @@ h1.text-content {
   .grid-item > a > img{
     width: 100%;
     object-position: center top;
-  }
-
-  .lb-close{
-    width: 60px;
-    height: 60px;
-    top: -20px;
-    right: -20px;
-  }
-
-  .lightbox .lb-image{
-    width: 700px!important;
-    height: 500px!important;
-  }
-  
-  .lightbox > .lb-image > img{
-    width: 100%!important;
-    object-fit: cover;
-  }
-  
-  .lb-data .lb-details{
-    width: 100%;
-    text-align: center;
-  }
-
-  .lb-details > .lb-caption{
-    font-size: 23px;
-  }
-  
-  .lb-details > .lb-number{
-    font-size: 16px;
   }
 }
 
@@ -300,14 +259,6 @@ h1.text-content {
     text-align: left;
     letter-spacing: 0.1em;
   }
-
-  .lb-close{
-    width: 60px;
-    height: 60px;
-    top: -20px;
-    right: -20px;
-  }
-  
 }
 
 @media screen and (max-width:576px){
@@ -342,7 +293,7 @@ h1.text-content {
   }
   
   .lightbox .lb-image{
-    width: 490px!important;
+    width: 500px!important;
     height: 380px!important;
   }
   
@@ -377,14 +328,6 @@ h1.text-content {
     height: 50px;
   }
   
-  .lb-close{
-    width: 50px;
-    height: 50px;
-    top: 0;
-    right: 0;
-  }
-  
-
 }
 
 @media screen and (max-width:425px) {
@@ -459,14 +402,6 @@ p{
   height: 50px;
 }
 
-.lb-close{
-  width: 40px;
-  height: 40px;
-  top: 0;
-  right: 0;
-}
-
-
 }
 
 @media screen and (max-width:375px) {
@@ -539,13 +474,6 @@ p{
 
 .lb-details > .lb-number{
   font-size: 13px;
-}
-
-.lb-close{
-  width: 30px;
-  height: 30px;
-  top: 0;
-  right: 0;
 }
 
 } 
