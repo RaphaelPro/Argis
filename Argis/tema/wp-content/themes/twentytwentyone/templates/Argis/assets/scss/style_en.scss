@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@font-face{
+  font-family: Gotham;
+  src: url(../fonts/Gotham-Light.otf);
+}
+
+@font-face{
+  font-family: Gotham;
+  src: url(../fonts/Gotham-Medium.otf);
+  font-weight: 600;
+}
+
+@font-face{
+  font-family: Gotham;
+  src: url(../fonts/Gotham-Black.otf);
+  font-weight: 800;
+}
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+
+$black:#1a1a1a;
+$primary:#00ADEF;
+$black-50:rgba(51, 51, 51, 0.8);
+
+$link-color: $black;
+
+$theme-colors:("black": $black,
+  "primary": $primary,
+  "black-50": $black-50);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+p{
+  font-family: Gotham, 'Roboto', sans-serif;
+}
+
+.text-container {
+  width: 780px;
+  min-width: 300px;
+  max-width: 100%;
+}
+
+.text-nav {
+ font-size: 13px;
+  letter-spacing: 0.395em;
+  color:#333333;
+  font-family: Gotham,'Roboto', sans-serif;
+}
+
+.text-content{
+  letter-spacing: 0.395em;
+  color: #333333;
+  font-family: Gotham,'Roboto', sans-serif;
+}
+
+h1.text-content {
+  letter-spacing: 0.12em;
+  line-height: 19px;
+  text-align: center;
+  font-family: Gotham,'Roboto', sans-serif;
+  color: rgba(51, 51, 51, 0.75);
+  font-weight: 600;
+}
+
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid{
+  margin-top: 20px;
+}
+
+.grid-item,
+.grid-sizer {
+  width: 20%;
+  position: relative;
+  z-index: 5;
+}
+
+.grid-item > a > img{
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+
+
+.grid-item{
+  padding: 05px;
+}
+
+.grid-item--width2 {
+  width: 40%;
+}
+
+.carousel {
+  display: none;
+  visibility: none;
+}
+
+.lightbox .lb-image {
+  height : 500px !important;
+  width : 830px !important;
+  display: block;
+  height: auto;
+  border: none!important;
+  border-radius: 0!important;
+  }
+
+  .lightbox > .lb-image > img{
+    width: 100%!important;
+    object-fit: cover!important;
+  }
+
+  .lb-data .lb-details{
+  width: 100%;
+  text-align: center;
+}
+
+.grid-item:hover{
+  background: rgba(0,0,0,.9);
+  transition: 0.25s ease-in-out;
+}
+
+.grid-item a:hover > img{
+  opacity: .2;
+  transition: 0.25s ease-in-out;
+}
+
+.text-item{
+  width: 100%;
+  opacity: 0;
+  visibility: none;
+  display: none;
+  position:absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-family: Gotham,'Roboto', sans-serif;
+  font-size: 21px;
+}
+
+.lb-nav{
+  display: none!important;
+  visibility: none!important;
+}
+
+
+
+.grid-item:hover .text-item{
+  opacity: 1!important;
+  visibility: visible;
+  transition: 0.25s ease-in-out;
+  display: block;
+}
+
+.idioma{
+  width: 35px;
+  height: 35px;
+}
+
+ .lb-close {
+  position:absolute!important;
+  background: white url('../img/x.svg') no-repeat center center ;
+  background-size: 20%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  right: -20px;
+  top: -20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width:900px){
+  .grid-item,
+  .grid-sizer {
+    width: 33.333%;
+  } 
+
+  .grid-item > a > img{
+    width: 100%;
+    object-position: center top;
+  }
+
+  .lb-close{
+    width: 60px;
+    height: 60px;
+    top: -20px;
+    right: -20px;
+  }
+
+  .lightbox .lb-image{
+    width: 700px!important;
+    height: 500px!important;
+  }
+  
+  .lightbox > .lb-image > img{
+    width: 100%!important;
+    object-fit: cover;
+  }
+  
+  .lb-data .lb-details{
+    width: 100%;
+    text-align: center;
+  }
+
+  .lb-details > .lb-caption{
+    font-size: 23px;
+  }
+  
+  .lb-details > .lb-number{
+    font-size: 16px;
+  }
+}
+
+ @media screen and (max-width:768px) {
+ /*  .grid-item,
+  .grid-sizer {
+    width: 33.333%;
+  } 
+  .grid-item img{
+    height: 100%;
+    width: 100%;
+  } */
+  .grid-item,
+  .grid-sizer {
+    display: none;
+    visibility: none;
+  }
+
+  .logo{
+    width: 130px;
+  }
+
+  .carousel {
+    width: 100%;
+    height: 400px;
+    display: block;
+    visibility: visible;
+  }
+
+  .carousel-inner > .carousel-item > a > img {
+    position:relative;
+    min-width: 100%;
+    height: 400px; /* Altura da imagem dentro do Carousel */
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  .lightbox .lb-image{
+    width: 700px!important;
+    height: 500px!important;
+  }
+  
+  .lightbox > .lb-image > img{
+    width: 100%!important;
+    object-fit: cover;
+  }
+  
+  .lb-data .lb-details{
+    width: 100%;
+    text-align: center;
+  }
+
+  .lb-details > .lb-caption{
+    font-size: 23px;
+  }
+  
+  .lb-details > .lb-number{
+    font-size: 16px;
+  }
+  
+  .icon{
+    width: 60px;
+    height: 60px;
+  }
+
+  .text-nav{
+    font-size: 20px;
+    text-align: left;
+    letter-spacing: 0.1em;
+  }
+
+  .lb-close{
+    width: 60px;
+    height: 60px;
+    top: -20px;
+    right: -20px;
+  }
+  
+}
+
+@media screen and (max-width:576px){
+  .grid-item,
+  .grid-sizer {
+    display: none;
+    visibility: none;
+  }
+
+  .logo{
+    width: 130px;
+  }
+  
+  .text-nav{
+    font-size: 15px;
+    text-align: left;
+    letter-spacing: 0.1em;
+  }
+  .carousel {
+    width: 100%;
+    height: 380px;
+    display: block;
+    visibility: visible;
+  }
+
+  .carousel-inner > .carousel-item > a > img {
+    position:relative;
+    min-width: 100%;
+    height: 380px; /* Altura da imagem dentro do Carousel */
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+  
+  .lightbox .lb-image{
+    width: 490px!important;
+    height: 380px!important;
+  }
+  
+  .lightbox > .lb-image > img{
+    width: 100%!important;
+    object-fit: cover;
+  }
+  
+  .lb-data .lb-details{
+    width: 100%;
+    text-align: center;
+  }
+
+  .lb-details > .lb-caption{
+    font-size: 21px;
+  }
+  
+  .lb-details > .lb-number{
+    font-size: 16px;
+  }
+
+  h1.text-content{
+    font-size: 23px!important;
+  }
+  
+  p{
+    font-size: 16px;
+  } 
+  
+  .icon{
+    width: 50px;
+    height: 50px;
+  }
+  
+  .lb-close{
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: 0;
+  }
+  
+
+}
+
+@media screen and (max-width:425px) {
+  .grid-item,
+  .grid-sizer {
+    display: none;
+    visibility: none;
+  }
+
+  .logo{
+    width: 100px;
+  }
+  
+  .text-nav{
+    font-size: 13px;
+    text-align: left;
+    letter-spacing: 0.1em;
+  }
+  
+  .text-container{
+    width: 100%;
+  }
+
+.carousel {
+  width: 100%;
+  height: 300px;
+  display: block;
+  visibility: visible;
+}
+
+.carousel-inner > .carousel-item > a > img {
+  position:relative;
+  min-width: 100%;
+  height: 300px; /* Altura da imagem dentro do Carousel */
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.lightbox .lb-image{
+  width: 400px!important;
+  height: 300px!important;
+}
+
+.lightbox > .lb-image > img{
+  width: 100%!important;
+  object-fit: cover;
+}
+
+.lb-data .lb-details{
+  width: 100%;
+  text-align: center;
+}
+
+.lb-details > .lb-caption{
+  font-size: 21px;
+}
+
+.lb-details > .lb-number{
+  font-size: 16px;
+}
+
+h1.text-content{
+  font-size: 23px!important;
+}
+
+p{
+  font-size: 16px;
+} 
+
+.icon{
+  width: 50px;
+  height: 50px;
+}
+
+.lb-close{
+  width: 40px;
+  height: 40px;
+  top: 0;
+  right: 0;
+}
+
+
+}
+
+@media screen and (max-width:375px) {
+  .grid-item,
+  .grid-sizer {
+    display: none;
+    visibility: none;
+  }
+  
+.logo{
+  width: 80px;
+}
+
+.text-nav{
+  font-size: 11px;
+  text-align: left;
+  letter-spacing: 0.1em;
+}
+
+h1.text-content{
+  font-size: 20px!important;
+}
+
+p{
+  font-size: 15px;
+} 
+
+.icon{
+  width: 50px;
+  height: 50px;
+}
+
+.text-container{
+  width: 100%;
+}
+
+.carousel {
+  width: 100%;
+  height: 280px;
+  display: block;
+  visibility: visible;
+}
+
+.carousel-inner > .carousel-item > a > img {
+  position:relative;
+  min-width: 100%;
+  height: 280px; /* Altura da imagem dentro do Carousel */
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.lightbox .lb-image{
+  width: 300px!important;
+  height: 280px!important;
+}
+
+.lightbox > .lb-image > img{
+  width: 100%!important;
+  object-fit: cover;
+}
+
+.lb-data .lb-details{
+  width: 100%;
+  text-align: center;
+}
+
+.lb-details > .lb-caption{
+  font-size: 16px;
+}
+
+.lb-details > .lb-number{
+  font-size: 13px;
+}
+
+.lb-close{
+  width: 30px;
+  height: 30px;
+  top: 0;
+  right: 0;
+}
+
+} 
+
+
+@import './node_modules/bootstrap/scss/bootstrap';
