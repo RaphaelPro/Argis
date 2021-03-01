@@ -1,5 +1,5 @@
 <?php
-  /* Template Name: Argis */
+  /* Template Name: Argis_en */
 ?>
 <!doctype <?php language_attributes(); ?>>
 <html>
@@ -14,14 +14,14 @@
   <link rel="stylesheet" href="<?php bloginfo( 'template_url' );?>/templates/Argis/assets/css/bootstrap.css">
   <link rel="stylesheet" href="<?php bloginfo( 'template_url' );?>/templates/Argis/assets/css/lightbox.min.css">
   <link rel="stylesheet" href="<?php bloginfo( 'template_url' );?>/templates/Argis/assets/css/style.css">
-  <?php wp_head() ?>
+
 </head>
 
 <body>
   <div class="container">
     <div class="row">
       <div class="col-12 d-flex justify-content-end p-3">
-        <a href="http://localhost/Argis/Argis/tema/">
+        <a href="https://agenciarosh.com.br/staging/argis/">
           <img class="idioma mr-4 " src="<?php bloginfo( 'template_url' );?>/templates/Argis/assets/img/br.svg" alt="Português">
         </a>
         <a href="argis_en">
@@ -160,7 +160,7 @@
     </div>
   </footer>
 
-  <?php wp_footer(); ?>
+
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
